@@ -1,0 +1,358 @@
+#game-container{
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* z-index: -1; */
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(222, 220, 228, 0.696), rgba(167, 170, 173, 0.516)),url(MapMakerPhotos/background.png);
+        background-position: center;
+        background-size: cover;
+
+}
+
+#game-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+    position: relative;
+    /* z-index: 1; */
+}
+
+#grid-container{
+    flex-basis: 50%;
+}
+
+#info-panel{
+    flex-basis: 50%;
+
+}
+  
+h1{
+    margin-left: 70px;
+    margin-top: 50px;
+}
+
+#grid-container p{
+    margin-left: 70px;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+#score-panel{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.score-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    flex: 1;
+    margin: 0 5px;
+}
+
+#spring-box { background-color: lightgreen; border: 3px solid darkgreen; }
+#summer-box { background-color: #FFA500; border: 3px solid darkgoldenrod}
+#autumn-box { background-color: lightcoral; border: 3px solid brown}
+#winter-box { background-color: lightblue; border: 3px solid darkcyan }    
+  
+.season {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    color: white;
+    display: block;
+    margin: 0;
+    padding: 5px 10px;
+  }
+  
+.points {
+    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin: 0px;
+    padding: 5px 0px;
+
+}
+  
+.total-score {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.season-header{
+    margin-bottom:5px;
+    padding: 5px;
+}
+
+.season-header h2{
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.season-header .underline{
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    display: block;
+    margin: 0 auto;
+}
+
+.mission-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.row-1, .row-2{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    margin: 10px 0px;
+    
+}
+
+.mission{
+    flex: 1;
+    max-width: 100%;
+    margin: 0px 10px;
+}
+
+#mission-A{
+    position: relative;
+}
+
+#mission-A-points{
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    right: 60px;
+}
+/*
+.letters{
+    position: absolute;
+    /* bottom: 5px; 
+    color: white;
+    right: -30px; 
+    
+}
+*/
+#mission-B{
+    position: relative;
+}
+
+#mission-B-points{
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    right: 60px;
+}
+
+#mission-C{
+    position: relative;
+}
+
+#mission-C-points{
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    right: 60px;
+}
+
+#mission-D{
+    position: relative;
+}
+
+#mission-D-points{
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    right: 60px;
+}
+
+.mission img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.time-header{
+    margin-bottom:5px;
+    padding: 5px;
+}
+
+.time-header h2{
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.time-header .underline{
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    display: block;
+    margin: 0 auto;
+}
+
+.controls-container{
+   display: flex;
+   gap: 10px;
+   padding: 10px;
+   align-items: center;
+   flex-direction: column;
+   margin: 5px;
+}
+
+.current-element-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.element-placeholder{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    flex-direction: column;
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 190px;
+    margin-bottom: 15px;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+button:hover{
+    background-color: #d7d7d7;
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 580px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 3px;
+    margin-left: 70px;
+}
+
+.cell{
+    width:50px;
+    height: 50px;
+    
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.current-element{
+    display: flex;
+    flex-direction:column;
+    width: 158px;
+    height: 158px;
+    margin-bottom: 10px;
+}
+
+.time{
+    text-align: end;
+    width: 100%;
+    height: 5px;
+    padding-right: 55px;
+}
+
+.randomRow{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.randomCol{
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 2px;
+    border-radius: 5px;
+    
+}
+
+.game-over{
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    position: absolute;
+    top: 20vh;
+    left: 35vw;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: rgb(208, 197, 197);
+    font-size: 1.2em;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.game-over p{
+    margin-left:25px;
+
+}
+
+.game-over h3{
+    margin-left:25px;
+    color: green;
+    font-size: 1.8em;
+}
+
+#restart-button{
+    margin-left: 25px;
+}
+
+.full-container{
+    background: linear-gradient(rgba(32, 31, 34, 0.696), rgba(16, 18, 20, 0.516));
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potato Map Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <div id="grid-container">
+      <h1>Potato Map Game</h1>
+      <p>Time units left: <span id="time-units-left">28</span></p>
+      <div id="grid">
+
+      </div>
+    </div>
+    <div class="full-container">
+      <div class="game-over">
+        <h3>Game over!</h3>
+        <p>Edge of the forest: <span id="AScore">0</span> points</p>
+        <p>Sleepy valley: <span id="BScore">0</span> points</p>
+        <p>Watering potatoes: <span id="CScore">0</span> points</p>
+        <p>Borderlands: <span id="DScore">0</span> points</p>
+        <p id="game-over-points">Total: <span id="end-points">0</span> points (including <span id="extra-points">0</span> points for surrounding mountains).</p> 
+        
+        <button id="restart-button">Restart</button>
+      </div>
+    </div>
+    <div id="info-panel">
+      <div id="score-panel">
+        <div class="score-box" id="spring-box">
+          <span class="season">Spring:</span>
+          <span class="points" id="spring-points">0 points</span>
+        </div>
+        <div class="score-box" id="summer-box">
+          <span class="season">Summer:</span>
+          <span class="points" id="summer-points">0 points</span>
+        </div>
+        <div class="score-box" id="autumn-box">
+          <span class="season">Autumn:</span>
+          <span class="points" id="autumn-points">0 points</span>
+        </div>
+        <div class="score-box" id="winter-box">
+          <span class="season">Winter:</span>
+          <span class="points" id="winter-points">0 points</span>
+        </div>
+      </div>
+      <div class="total-score">
+        Total: <span class="total-points" id="total-points">0 points</span>
+      </div>
+      <div class="season-header">
+        <h2>Current season: <span id="current-season">Spring(AB)</span></h2>
+        <div class="underline"></div>
+      </div>
+      <div class="missions-container">
+        <div class="row-1">
+          <div class="mission" id="mission-A">
+            <img src="MapMakerPhotos/missions_eng/Group 69.png">
+            <p id="mission-A-points">0 points [A]</p>
+          </div>
+          <div class="mission" id="mission-B">
+            <img src="MapMakerPhotos/missions_eng/Group 74.png">
+            <p id="mission-B-points">0 points [B]</p>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="mission" id="mission-C">
+            <img src="MapMakerPhotos/missions_eng/Group 70.png">
+            <p id="mission-C-points">0 points [C]</p>
+          </div>
+          <div class="mission" id="mission-D">
+            <img src="MapMakerPhotos/missions_eng/Group 78.png">
+            <p id="mission-D-points">0 points [D]</p>
+          </div>
+        </div>
+        <div class="time-header">
+          <h2>Elapsed time in current season: <span id="time-left">0</span>/7</h2>
+          <div class="underline"></div>
+        </div>
+        <div class="controls-container">
+          <div class="current-element-info">
+            <h2>Current element:</h2>
+            <div class="element-placeholder">
+              <p class="time"></p>
+              <div class="current-element">
+                <div class="randomRow">
+                  <div class="randomCol"></div>
+                  <div class="randomCol"></div>
+                  <div class="randomCol"></div>
+                </div>
+                <div class="randomRow">
+                  <div class="randomCol"></div>
+                  <div class="randomCol"></div>
+                  <div class="randomCol"></div>
+                </div>
+                <div class="randomRow">
+                  <div class="randomCol"></div>
+                  <div class="randomCol"></div>
+                  <div class="randomCol"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons-container">
+            <button id="rotate-button">Rotate</button>
+            <button id="flip-button">Flip</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
